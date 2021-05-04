@@ -8,7 +8,8 @@
                       \/__,_ /\/___/  \/__/ \/_/   \/_/\/____/\/____/\/___/
 ```
 
-# Dotfiles
+# Dotfiles Rice With Nord Theme!
+
 
 # Daftar Isi
 
