@@ -11,7 +11,7 @@
 # Dotfiles
 
 ![GitHub](https://img.shields.io/github/license/sukalaper/dotfiles?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/sukalaper/dotfiles?label=dotfiles%20Size&style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/sukalaper/dotfiles?label=Dotfiles%20Size&style=for-the-badge)
 
 # Daftar Isi
 
@@ -55,7 +55,7 @@
 ![i3gaps workflow](https://github.com/sukalaper/dotfiles/blob/master/Screenshoot/Nvim%20With%20Dunst.png?raw=true)
 
 ### i3-gaps Workspace
-![i3gaps workflow] (https://github.com/sukalaper/dotfiles/blob/master/Screenshoot/Workspace%20With%20Nvim.png?raw=true)
+![i3gaps workflow](https://github.com/sukalaper/dotfiles/blob/master/Screenshoot/Workspace%20With%20Nvim.png?raw=true)
 
 # Bigthanks to :
 
