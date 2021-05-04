@@ -10,9 +10,6 @@
 
 # Dotfiles
 
-![GitHub](https://img.shields.io/github/license/sukalaper/dotfiles?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/sukalaper/dotfiles?label=Dotfiles%20Size&style=for-the-badge)
-
 # Daftar Isi
 
 <!-- TOC depthFrom:2 -->
@@ -59,7 +56,7 @@
 
 # Bigthanks to :
 
-- [Adi1090x](https://github.com/adi1090x) -> <i>For Polybar, Rofi, Etc.</i>
-- [Mnabiladani](https://github.com/mnabila) -> <i>For README.md, Etc.</i>
-- [Bandithijo](https://github.com/bandithijo) -> <i>For The Blog That Poisoned Me Switching To i3, Etc, Lol.</i>
-- [Siduck76](https://github.com/siduck76) -> <i>For Neovim, If You Want To Use Neovim That I Use, You Can Directly Refer To This Person's Repository, Don't Forget To Say Thank You And Give Credit To Him, Etc.</i>
+- [Adi1090x](https://github.com/adi1090x) > <i>For Polybar, Rofi, Etc.</i>
+- [Mnabiladani](https://github.com/mnabila) > <i>For README.md, Etc.</i>
+- [Bandithijo](https://github.com/bandithijo) > <i>For The Blog That Poisoned Me Switching To i3, Etc, Lol.</i>
+- [Siduck76](https://github.com/siduck76) > <i>For Neovim, If You Want To Use Neovim That I Use, You Can Directly Refer To This Person's Repository, Don't Forget To Say Thank You And Give Credit To Him, Etc.</i>
