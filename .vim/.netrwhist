@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/anggiramadyansyah/.config/sxhkd'
+let g:netrw_dirhist_3='/home/anggiramadyansyah/.config/i3'
+let g:netrw_dirhist_2='/home/anggiramadyansyah/.config/bspwm'
+let g:netrw_dirhist_1='/home/anggiramadyansyah'

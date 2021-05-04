@@ -1,0 +1,334 @@
+#_ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+# My Kinda Disgusting Configurations i3wm  
+# How To Use Keybindings ?                 
+#  * $super = win logo                     
+#  * $alt = alt                            
+#  * XF86 = Fn
+#
+# Want To Use? Just Uncomment #.
+#                             
+# Best Regards,                            
+# Sukalaper.                               
+#_ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+
+# Set Modifier
+#---------------
+set $super Mod4
+#---------------
+set $alt Mod1
+#---------------
+
+
+# Set Font
+#-----------------------------------
+font pango:Iosevka Custom 9
+#-----------------------------------
+#font pango: Blex Mono Nerd Font 9
+#-----------------------------------
+
+
+# Use Mouse+$super To Drag Floating Windows 
+#-----------------------
+floating_modifier $super
+#-----------------------
+
+
+# Autostart As System Boot
+#------------------------------------------------------------------
+exec_always --no-startup-id /home/anggiramadyansyah/.config/polybar/default/launch.sh
+#------------------------------------------------------------------
+exec_always --no-startup-id dunst
+#------------------------------------------------------------------
+exec_always --no-startup-id mpd
+#------------------------------------------------------------------
+exec_always --no-startup-id xrdb ~/.Xresources
+#------------------------------------------------------------------
+exec_always --no-startup-id /home/anggiramadyansyah/.fehbg
+#------------------------------------------------------------------
+exec_always --no-startup-id picom -b
+#------------------------------------------------------------------
+exec_always --no-startup-id xfce4-power-manager
+#------------------------------------------------------------------
+exec_always --no-startup-id unclutter -grab &
+#------------------------------------------------------------------
+
+
+# Make the Currently Focused Window a Scratchpad
+#-----------------------------------------
+bindsym $super+Shift+minus move scratchpad
+#-----------------------------------------
+
+
+# Show the First Scratchpad Window
+#-----------------------------------
+bindsym $super+minus scratchpad show
+#-----------------------------------
+
+
+# Sticky Floating Windows
+# Syntax: sticky enable|disable|toggle
+#--------------------------------------
+bindsym $super+Shift+plus sticky toggle
+#--------------------------------------
+
+
+# Start A Terminal
+#---------------------------------------
+bindsym $super+Return exec alacritty
+#---------------------------------------
+bindsym $super+Shift+Return exec termite
+#---------------------------------------
+
+
+# Start Rofi (A Program Launcher) With Theme
+#---------------------------------------------------------------------------------
+# Launcher
+bindsym $super+a exec /home/anggiramadyansyah/.config/rofi/bin/launcher
+#---------------------------------------------------------------------------------
+# Powermenu
+bindsym $super+p exec sh /home/anggiramadyansyah/.config/rofi/bin/powermenu
+#---------------------------------------------------------------------------------
+# Network Manager
+bindsym $super+n exec sh /home/anggiramadyansyah/.config/rofi/bin/network
+#---------------------------------------------------------------------------------
+# Screenshoot
+bindsym $super+Shift+s exec sh /home/anggiramadyansyah/.config/rofi/bin/screenshot
+#---------------------------------------------------------------------------------
+
+
+# Exit i3
+#-------------------------------------------------------------------------------------------------------
+bindsym $super+q exec "i3-nagbar -f 'Iosevka' -t warning -m 'Really, exit dude?' -b 'Yes' 'i3-msg exit'"
+#-------------------------------------------------------------------------------------------------------
+
+
+# Screenshoot With Dunst Notification
+#---------------------------------------------------------------------------------------------------------------------------------------------------------
+bindsym Print exec "scrot 'Screenshoot_%a-%d%b%y_%H.%M.png' -e 'mv $f /home/anggiramadyansyah/Gambar/Screenshoot'; notify-send 'Screenshoot Is Taken!'"
+#---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Lockscreen
+#------------------------------------------------
+bindsym $super+l exec betterlockscreen -l dimblur  
+#------------------------------------------------
+
+
+# Applications 
+#---------------------------------------------
+# Whatsapp
+bindsym $super+Shift+w exec whatsapp-for-linux
+#---------------------------------------------
+# Firefox
+bindsym $super+Shift+f exec firefox
+#---------------------------------------------
+# File Manager
+bindsym $super+Shift+t exec pcmanfm
+#---------------------------------------------
+
+
+# Change Volume
+#---------------------------------------------------------
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+
+#--------------------------------------------------------- 
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%-
+#--------------------------------------------------------- 
+bindsym XF86AudioMute exec amixer set Master toggle
+#---------------------------------------------------------
+
+
+# Music Control
+#------------------------------------
+bindsym XF86AudioNext exec mpc next
+#------------------------------------
+bindsym XF86AudioPrev exec mpc prev
+#------------------------------------
+bindsym XF86AudioPlay exec mpc toggle
+#------------------------------------
+bindsym XF86AudioStop exec mpc stop
+#------------------------------------
+
+
+# Brightness Control
+#-------------------------------------------------------------------
+#bindsym XF86MonBrightnessUp     exec no-startup-id brightnessctl s 2%+
+#bindsym XF86MonBrightnessDown   exec no-startup-id brightnessctl s 2%-
+#-------------------------------------------------------------------
+
+
+# i3 Window Management
+#------------------------------------------
+# Kill Focused Window
+bindsym $alt+F4 kill
+#------------------------------------------
+
+# Change Focus 
+#------------------------------------------
+bindsym $super+Left focus left
+#------------------------------------------
+bindsym $super+Down focus down
+#------------------------------------------
+bindsym $super+Up focus up
+#------------------------------------------
+bindsym $super+Right focus right
+#------------------------------------------
+
+# Move Focused Window
+#------------------------------------------
+bindsym $super+Shift+Left move left 3 px
+#------------------------------------------
+bindsym $super+Shift+Down move down 3 px
+#------------------------------------------
+bindsym $super+Shift+Up move up 3 px
+#------------------------------------------
+bindsym $super+Shift+Right move right 3 px
+#------------------------------------------
+
+# Change Mode Window
+# -------------------------------------------------
+# Split In Horizontal Orientation
+bindsym $super+h split h
+# -------------------------------------------------
+# Split In Vertical Orientation
+bindsym $super+v split v
+# -------------------------------------------------
+# Enter Fullscreen Mode For The Focused Container
+bindsym $super+f fullscreen toggle
+# -------------------------------------------------
+# Change Container To Stacking Mode
+bindsym $super+w layout stacking
+# -------------------------------------------------
+# Change Container Layout Split
+bindsym $super+s layout toggle split
+# -------------------------------------------------
+# Toggle tiling / Floating
+bindsym $super+space floating toggle
+# -------------------------------------------------
+# Change Focus Between Tiling / Floating Windows
+bindsym $super+Shift+space focus mode_toggle
+# -------------------------------------------------
+
+# Switch To Workspace
+#-----------------------------------------
+bindsym $alt+Control+Right workspace next
+#-----------------------------------------
+bindsym $alt+Control+Left workspace prev
+#-----------------------------------------
+bindsym $super+1 workspace 1
+#-----------------------------------------
+bindsym $super+2 workspace 2
+#-----------------------------------------
+bindsym $super+3 workspace 3
+#-----------------------------------------
+bindsym $super+4 workspace 4
+#-----------------------------------------
+bindsym $super+5 workspace 5
+#-----------------------------------------
+bindsym $super+6 workspace 6
+#-----------------------------------------
+bindsym $super+7 workspace 7
+#-----------------------------------------
+
+# Move Focused Container To Workspace
+#---------------------------------------------------
+bindsym $super+Shift+1 move container to workspace 1
+#---------------------------------------------------
+bindsym $super+Shift+2 move container to workspace 2
+#---------------------------------------------------
+bindsym $super+Shift+3 move container to workspace 3
+#---------------------------------------------------
+bindsym $super+Shift+4 move container to workspace 4
+#---------------------------------------------------
+bindsym $super+Shift+5 move container to workspace 5
+#---------------------------------------------------
+bindsym $super+Shift+6 move container to workspace 6
+#---------------------------------------------------
+bindsym $super+Shift+7 move container to workspace 7
+#---------------------------------------------------
+
+
+# Restart i3 Inplace (Preserves Your Layout/Session, Can Be Used To Upgrade i3)
+#-----------------------------
+bindsym $super+Shift+r restart
+#-----------------------------
+
+
+# Resize Window (You Can Also Use The Mouse For That)
+#-----------------------------------------------------
+mode "resize" {
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
+        bindsym Return mode "default"
+}
+bindsym $super+r mode "resize"
+#------------------------------------------------------
+
+
+# Window Title Alignment And Border Pixel 
+# This option determines the window title’s text alignment.
+# Default is left
+# Syntax: title_align left|center|right
+#---------------------------------------------------------------------------------------
+#title_align left
+#---------------------------------------------------------------------------------------
+#for_window [class="^.*"] title_format "anggiramadyansyah@sukalaper: ~" border normal 1
+#---------------------------------------------------------------------------------------
+
+# Border
+# Normal = Border + Title
+# Pixel = Only Border
+# None = Without Border
+# For the Normal and Pixel options we can add a value to the thickness of the border such as 0, 1, 2.
+#--------------------------------------
+for_window [class="^.*"] border pixel 4
+#--------------------------------------
+#for_window [class="^.*"] title_format " > %title"
+#--------------------------------------
+
+# How To Test Border?
+#bindsym $super+b               border normal 0
+#bindsym $super+Shift+i         border normal 1
+#bindsym $super+Shift+y         border pixel 5
+#bindsym $super+y               border none
+
+
+# Gaps
+# Syntax: inner|outer
+# Syntax: current|all
+# Syntax: set|plus|minus <px>
+#------------------
+#smart_borders on
+#------------------
+smart_gaps on
+#------------------
+gaps inner 10
+#------------------
+gaps outer 8
+#------------------
+
+
+# Colour Of ->              #Border     #Background   #Text       #Indicator
+#----------------------------------------------------------------------------
+client.focused              #FFFFFF     #212B30      #FFFFFF      #959ba6
+#----------------------------------------------------------------------------
+client.unfocused            #FFFFFF     #212B30      #FFFFFF      #b9c244
+#----------------------------------------------------------------------------
+client.focused_inactive     #FFFFFF     #212B30      #FFFFFF      #ec7875
+#----------------------------------------------------------------------------
+client.urgent               #FFFFFF     #212B30      #FFFFFF      #95e1d3
+#----------------------------------------------------------------------------
+
+
+
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+#	    __________  ______
+#	   / ____/ __ \/ ____/
+#	  / __/ / / / / /_    
+#	 / /___/ /_/ / __/    
+#	/_____/\____/_/       
+#
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
