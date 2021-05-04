@@ -59,5 +59,7 @@
 
 # Bigthanks to :
 
-- [Telegram - mnabila](https://t.me/mnabila)
-- [Twitter - mnabiladani](https://twitter.com/mnabiladani)
+- [Adi1090x](https://github.com/adi1090x)[For Polybar, Rofi, Etc.]
+- [Mnabiladani](https://github.com/mnabila)[For README.md, Etc.]
+- [Bandithijo](https://github.com/bandithijo)[For the blog that poisoned me switching to i3, Etc, lol.]
+- [Siduck76](https://github.com/siduck76)[For Neovim, If you want to use neovim that I use, you can directly refer to this person's repository, don't forget to say thank you and give credit to him, Etc.)
